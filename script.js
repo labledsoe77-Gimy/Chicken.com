@@ -48,12 +48,16 @@ rainBtn.onclick = () => {
     }
 };
 
-// Chicken facts
+// Chicken facts (new updated list)
 const chickenFacts = [
-    "Chickens recognize over 100 faces.",
-    "Chickens dream during REM sleep.",
-    "Chickens communicate before hatching.",
-    "A chicken lived 18 months without a head."
+    "Chickens can run up to 9 miles per hour.",
+    "A group of chickens is called a flock.",
+    "Chickens have excellent color vision, even better than humans.",
+    "Chickens can remember over 100 different faces.",
+    "The longest recorded lifespan of a chicken is 16 years.",
+    "Chickens make over 30 different sounds to communicate.",
+    "Some chickens can fly short distances despite being domesticated.",
+    "Chickens are the closest living relatives of the Tyrannosaurus Rex."
 ];
 
 factBtn.onclick = () => {
