@@ -1,10 +1,6 @@
-// Chicken images
+// Chicken image (new image for spawn and rain)
 const chickenImages = [
-    "https://i.imgur.com/8aJJeYp.jpeg",
-    "https://i.imgur.com/3cZb2at.jpeg",
-    "https://i.imgur.com/D1ybx5t.jpeg",
-    "https://i.imgur.com/xPUy7UO.jpeg",
-    "https://i.imgur.com/U5Q9e0y.jpeg"
+    "https://cdn.britannica.com/07/183407-050-C35648B5/Chicken.jpg"
 ];
 
 // DOM elements
@@ -21,8 +17,10 @@ const chickenArea = document.getElementById("chickenArea");
 // Spawn a chicken
 spawnBtn.onclick = () => {
     const img = document.createElement("img");
-    img.src = chickenImages[Math.floor(Math.random() * chickenImages.length)];
+    img.src = chickenImages[0];
     img.style.width = "150px";
+    img.style.borderRadius = "10px";
+    img.style.boxShadow = "0 0 10px rgba(0,0,0,0.2)";
     chickenArea.appendChild(img);
 };
 
@@ -34,7 +32,7 @@ rainBtn.onclick = () => {
         raining = true;
         rainInterval = setInterval(() => {
             const c = document.createElement("img");
-            c.src = chickenImages[Math.floor(Math.random() * chickenImages.length)];
+            c.src = chickenImages[0];
             c.style.position = "fixed";
             c.style.width = "80px";
             c.style.top = "-100px";
@@ -50,7 +48,7 @@ rainBtn.onclick = () => {
     }
 };
 
-// Facts
+// Chicken facts
 const chickenFacts = [
     "Chickens recognize over 100 faces.",
     "Chickens dream during REM sleep.",
@@ -74,5 +72,5 @@ danceBtn.onclick = () => {
     danceImg.style.display = dancing ? "block" : "none";
 };
 
-// Close
+// Close button reloads the page
 closeBtn.onclick = () => location.reload();
